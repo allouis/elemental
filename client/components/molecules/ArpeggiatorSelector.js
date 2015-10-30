@@ -1,7 +1,8 @@
 import capitalize from 'capitalize';
-import React from 'react'; // eslint-disable-line
+import React from 'react';
 import {map} from 'ramda';
 import InputLabel from '../atoms/InputLabel';
+import Checkbox from '../atoms/Checkbox';
 
 export default ({arpeggiatorIsOn,
                  handleArpeggiatorIsOnChange,
@@ -11,9 +12,8 @@ export default ({arpeggiatorIsOn,
   <div className="flex-column">
     <label>
       <InputLabel text="Arpeggiator" />
-      <input defaultChecked={arpeggiatorIsOn}
-             onChange={handleArpeggiatorIsOnChange}
-             type="checkbox" />
+      <Checkbox checked={arpeggiatorIsOn}
+                onChange={handleArpeggiatorIsOnChange} />
     </label>
     <label>
       <InputLabel text="Pattern" />
